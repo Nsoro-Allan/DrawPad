@@ -9,7 +9,6 @@ function App() {
   const [color, setColor] = useState('#3ecf8e'); 
   const [size, setSize] = useState(5);
   const [hasDrawn, setHasDrawn] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [tool, setTool] = useState<'pen' | 'eraser'>('pen');
   const [bgColor, setBgColor] = useState('#121212');
   const [isDark, setIsDark] = useState(true);
@@ -76,7 +75,6 @@ function App() {
     // Use event.nativeEvent.offsetX/Y for accurate drawing position
     const x = event.nativeEvent.offsetX;
     const y = event.nativeEvent.offsetY;
-    setMousePos({ x, y });
     const context = canvas.getContext('2d');
     if (!context) return;
     if (tool === 'eraser') {
@@ -126,7 +124,6 @@ function App() {
     // Calculate accurate canvas coordinates
     const x = (event.clientX - rect.left) * scaleX;
     const y = (event.clientY - rect.top) * scaleY;
-    setMousePos({ x, y });
     // Pass a synthetic event to draw with corrected coordinates
     draw({ ...event, nativeEvent: { ...event.nativeEvent, offsetX: x, offsetY: y } });
   };
