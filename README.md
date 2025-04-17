@@ -17,7 +17,7 @@ A modern, web-based drawing application built with React and TypeScript. DrawPad
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Nsoro-Allan/DrawPad.git
    cd DrawPad
    ```
 2. **Install dependencies:**
@@ -80,18 +80,5 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Create a Pull Request.
 
----
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-## Contact
-
-For questions, suggestions, or feedback, please open an issue or contact the maintainer.
-
----
 
 Enjoy creating with DrawPad!
